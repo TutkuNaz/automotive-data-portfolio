@@ -1,101 +1,94 @@
 # Automotive Data Portfolio
 
-A focused portfolio of data projects covering vehicle-market economics, fleet efficiency and car-rental market intelligence.
+Data projects focused on automotive markets, fleet economics and mobility analytics.
 
-My interest in automotive and mobility analytics grew through my internship experience in the car rental industry. The projects in this portfolio are independent analyses built exclusively from public data; they do not use proprietary company, customer, employee or operational information.
-
-## Portfolio Objective
-
-The portfolio is designed around a vehicle lifecycle rather than a collection of unrelated datasets:
-
-**vehicle acquisition and resale → operating efficiency → rental demand and market context**
-
-Each repository is built to be reviewable by both business and technical audiences, with reproducible Python code, SQL analysis, explicit data provenance, executed notebooks, tested functions and decision-oriented documentation.
+My interest in automotive analytics developed through experience in the car-rental industry. The work in this portfolio is independent and uses public data only; no proprietary company, customer or operational data are included.
 
 ## Projects
 
-| # | Project | Business focus | Technical focus | Build status |
-|---|---|---|---|---|
-| 01 | [**Used Car Market Intelligence**](https://github.com/atasardacagan/01-used-car-market-intelligence) | Pricing, mileage, depreciation patterns, resale-value benchmarking | Python, SQL, scikit-learn, Streamlit | Validated end-to-end |
-| 02 | [**Fleet Efficiency Benchmark**](https://github.com/atasardacagan/02-fleet-efficiency-benchmark) | Fuel-efficiency screening, vehicle-class trade-offs, operating-cost proxy | Python, SQL, SciPy, statistical testing | Validated end-to-end |
-| 03 | [**LAX Rental Market Intelligence**](https://github.com/atasardacagan/03-lax-rental-market-intelligence) | Airport rental seasonality, market concentration, share volatility | Python, SQL, public-data extraction, Streamlit | Validated end-to-end |
+| Project | Focus | Stack |
+|---|---|---|
+| [**Used Car Market Intelligence**](https://github.com/atasardacagan/01-used-car-market-intelligence) | Used-car pricing, mileage, depreciation patterns and resale-value benchmarking | Python, SQL, scikit-learn, Streamlit |
+| [**Fleet Efficiency Benchmark**](https://github.com/atasardacagan/02-fleet-efficiency-benchmark) | Fuel economy, vehicle-class trade-offs and fleet-efficiency benchmarking | Python, SQL, SciPy, SQLite |
+| [**LAX Rental Market Intelligence**](https://github.com/atasardacagan/03-lax-rental-market-intelligence) | Airport rental demand, seasonality, market share and concentration | Python, SQL, pdfplumber, Streamlit |
 
-### 01 — Used Car Market Intelligence
+## Portfolio Structure
 
-Repository: https://github.com/atasardacagan/01-used-car-market-intelligence
+The projects follow a practical vehicle-lifecycle perspective:
 
-Uses a CC0 UK used-car source to build a pricing and resale-oriented analytical workflow. The repository contains modular cleaning code, SQL cohort analysis, three regression benchmarks, feature importance, executed notebooks and an interactive dashboard. Committed model metrics are deliberately labeled as development-validation results rather than full-dataset claims.
+**acquisition and resale → operating efficiency → rental demand and market context**
 
-### 02 — Fleet Efficiency Benchmark
+### Used Car Market Intelligence
 
-Repository: https://github.com/atasardacagan/02-fleet-efficiency-benchmark
+A pricing and resale analysis built on a public UK used-car dataset. The project combines data cleaning, SQL segmentation, regression benchmarks, feature analysis and an interactive dashboard.
 
-Uses an EPA-derived historical fuel-economy sample to compare vehicle classes, displacement segments and model-year distributions. The project deliberately avoids unnecessary machine learning and instead emphasizes SQL, statistical testing and honest interpretation of a limited historical benchmark.
+[View repository →](https://github.com/atasardacagan/01-used-car-market-intelligence)
 
-### 03 — LAX Rental Market Intelligence
+### Fleet Efficiency Benchmark
 
-Repository: https://github.com/atasardacagan/03-lax-rental-market-intelligence
+A historical fuel-economy study based on an EPA-derived dataset. The analysis compares vehicle classes, engine displacement and model-year distributions using SQL and statistical testing.
 
-Transforms official Los Angeles World Airports aggregate rental-car statistics into a business-analysis layer for monthly demand, market concentration and revenue-per-transaction benchmarking. The analysis is explicitly market-level; it makes no claims about internal pricing, utilization, customer behavior or profitability.
+[View repository →](https://github.com/atasardacagan/02-fleet-efficiency-benchmark)
 
-## Skills Demonstrated
+### LAX Rental Market Intelligence
 
-- Python data pipelines with pandas and NumPy
-- SQL analytics with SQLite, CTEs and window functions
-- Data quality validation and source reconciliation
-- Exploratory data analysis and statistical testing
-- Regression baselines and model evaluation
-- Business KPI definition and careful interpretation
+A market-level analysis of public Los Angeles World Airports rental-car statistics. The project covers monthly demand, market concentration, company share volatility and revenue-per-transaction benchmarking.
+
+[View repository →](https://github.com/atasardacagan/03-lax-rental-market-intelligence)
+
+## Core Skills
+
+- Python data processing with pandas and NumPy
+- SQL analytics with CTEs, window functions and segmentation
+- Data validation, reconciliation and quality checks
+- Exploratory analysis and statistical testing
+- Regression modeling and model evaluation
+- Business KPI design and interpretation
 - Matplotlib and Plotly visualization
 - Streamlit dashboard development
-- pytest unit tests
-- Reproducible dataset-ingestion scripts
-- GitHub Actions CI configuration
-- Licensing and data-provenance documentation
-- Technical writing for recruiter and engineering audiences
+- pytest-based testing
+- Reproducible data-ingestion workflows
+- GitHub Actions CI
+- Dataset licensing and provenance documentation
 
-## Data Principles
+## Working Principles
 
-1. Use public, legally reusable sources.
-2. Keep large or conservatively licensed raw data outside Git history.
-3. Never present development-sample results as full-dataset findings.
-4. Separate correlation, prediction and causal claims.
-5. Document assumptions and data-quality exceptions.
-6. Use machine learning only when it improves the business analysis.
+The projects are built around a few consistent rules:
 
-See [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) for the source-selection and licensing review.
+- use public data with documented provenance;
+- keep raw data outside the repository when redistribution is unnecessary or unclear;
+- distinguish descriptive analysis, prediction and causal interpretation;
+- document assumptions and known data limitations;
+- use machine learning only when it adds analytical value.
 
-## Repository Standards
+Dataset selection and licensing notes are documented in [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md).
 
-Every project follows the same practical standard without creating empty folders for appearance:
+## Repository Standard
+
+Each project separates analysis code, notebooks, SQL, tests and generated outputs:
 
 ```text
 project/
 ├── README.md
-├── LICENSE
-├── requirements.txt
-├── pyproject.toml
 ├── data/
-│   └── README.md
 ├── notebooks/
 ├── scripts/
 ├── src/
 ├── sql/
 ├── reports/
-│   └── figures/
 ├── tests/
 └── .github/workflows/ci.yml
 ```
 
-Dashboard folders are included only where an interactive view adds value.
+Interactive dashboards are included where they improve exploration of the results.
 
-## Portfolio Roadmap
+## Supporting Material
 
-The next logical additions, if the portfolio needs to expand beyond these three repositories, are **vehicle reliability / maintenance risk** using NHTSA complaints and recalls, followed by **EV adoption / charging-gap analysis** using explicitly licensed public EV and charging-infrastructure data. They are intentionally not opened as empty repositories.
+- [`CV_PROJECT_DESCRIPTIONS.md`](CV_PROJECT_DESCRIPTIONS.md) — concise project bullets for CV use
+- [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) — dataset and licensing review
+- [`QA_REPORT.md`](QA_REPORT.md) — validation and publication checks
+- [`SOCIAL_POSTS.md`](SOCIAL_POSTS.md) — project summaries for professional posts
 
-## Supporting Documents
+## Next Areas of Interest
 
-- [`CV_PROJECT_DESCRIPTIONS.md`](CV_PROJECT_DESCRIPTIONS.md) — concise CV-ready bullets
-- [`SOCIAL_POSTS.md`](SOCIAL_POSTS.md) — technical LinkedIn post drafts
-- [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) — dataset and licensing decisions
-- [`QA_REPORT.md`](QA_REPORT.md) — build and validation record
+Potential extensions include vehicle reliability and maintenance-risk analysis using NHTSA data, and EV adoption / charging-infrastructure analysis using licensed public datasets.
