@@ -1,0 +1,15 @@
+category,name,provider,geography,access,license_or_terms,update_cadence,project_idea,source_url
+safety,NHTSA Vehicle Complaints,NHTSA,United States,API + bulk download,U.S. federal public data,Daily,Reliability risk signals by make/model/year,https://www.nhtsa.gov/nhtsa-datasets-and-apis
+safety,NHTSA Recalls,NHTSA,United States,API + bulk download,U.S. federal public data,Frequent,Recall frequency and severity benchmarking,https://www.nhtsa.gov/nhtsa-datasets-and-apis
+safety,NHTSA Investigations,NHTSA,United States,Bulk download,U.S. federal public data,Frequent,Defect investigation trend analysis,https://www.nhtsa.gov/nhtsa-datasets-and-apis
+safety,NHTSA FARS Crash Data,NHTSA,United States,Download,U.S. federal public data,Annual,Crash severity and vehicle-risk analysis,https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+efficiency,EPA Fuel Economy Data,U.S. EPA,United States,CSV download,U.S. federal public data,Annual,Vehicle efficiency and TCO benchmarking,https://www.epa.gov/compliance-and-fuel-economy-data/test-data-annual-fuel-economy-guide
+efficiency,Alternative Fueling Station Data,DOE AFDC,United States + Canada,CSV/JSON download,AFDC data terms,Ongoing,EV charging coverage and infrastructure-gap analysis,https://afdc.energy.gov/data_download
+vehicle-specs,NHTSA vPIC,NHTSA,United States,API,U.S. federal public data,Frequent,VIN decoding and vehicle specification enrichment,https://vpic.nhtsa.dot.gov/api/
+road-safety,STATS19 Road Safety Open Data,UK Department for Transport,Great Britain,CSV download,Open Government Licence,Annual + provisional,Collision hotspot and vehicle involvement analysis,https://www.gov.uk/government/statistical-data-sets/road-safety-open-data
+maintenance,Anonymised MOT Tests and Results,UK Department for Transport,Great Britain,ZIP/CSV download,Open Government Licence,Annual,Failure-rate and maintenance-risk analysis,https://www.data.gov.uk/dataset/e3939ef8-30c7-4ca8-9c7c-ad9475cc9b2f/anonymised_mot_test
+mobility,NYC TLC Trip Record Data,NYC Taxi and Limousine Commission,New York City,Parquet downloads,NYC Open Data / source terms,Monthly,Demand forecasting and spatial mobility analysis,https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+mobility,NYC TLC Aggregated Reports,NYC Taxi and Limousine Commission,New York City,CSV reports,NYC Open Data / source terms,Monthly,Trips vehicles fares and market trend analysis,https://www.nyc.gov/site/tlc/about/aggregated-reports.page
+rental,LAX Rental Car Monthly Statistics,Los Angeles World Airports,Los Angeles,PDF reports,LAWA website terms,Monthly/annual,Airport rental demand and market-share analysis,https://www.lawa.org/lawa-investor-relations/statistics-for-lax/rental-car-statistics
+used-cars,100000 UK Used Car Data Set,Kaggle / Aditya Desai,United Kingdom,CSV,CC0 1.0,Static,Used-car pricing depreciation and resale modeling,https://www.kaggle.com/datasets/adityadesai13/used-car-dataset-ford-and-mercedes
+efficiency,plotnine mpg Dataset,plotnine / EPA-derived,United States,Python package,MIT package + EPA-derived data,Static,Compact fuel-economy benchmarking,https://plotnine.org/reference/mpg.html
