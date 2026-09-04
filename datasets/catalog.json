@@ -12,14 +12,14 @@
     "parking",
     "rental",
     "road-safety",
-    "safety",
     "used-cars",
     "vehicle-market",
+    "vehicle-safety",
     "vehicle-specs"
   ],
   "datasets": [
     {
-      "category": "safety",
+      "category": "vehicle-safety",
       "name": "NHTSA Vehicle Complaints",
       "provider": "NHTSA",
       "geography": "United States",
@@ -30,18 +30,18 @@
       "source_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
     },
     {
-      "category": "safety",
+      "category": "vehicle-safety",
       "name": "NHTSA Recalls",
       "provider": "NHTSA",
       "geography": "United States",
       "access": "API + bulk download",
       "license_or_terms": "U.S. federal public data",
-      "update_cadence": "Frequent",
+      "update_cadence": "Daily",
       "project_idea": "Recall frequency and component benchmarking",
       "source_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
     },
     {
-      "category": "safety",
+      "category": "vehicle-safety",
       "name": "NHTSA Investigations",
       "provider": "NHTSA",
       "geography": "United States",
@@ -52,7 +52,7 @@
       "source_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
     },
     {
-      "category": "safety",
+      "category": "vehicle-safety",
       "name": "NHTSA Manufacturer Communications",
       "provider": "NHTSA",
       "geography": "United States",
@@ -63,7 +63,7 @@
       "source_url": "https://www.nhtsa.gov/nhtsa-datasets-and-apis"
     },
     {
-      "category": "safety",
+      "category": "road-safety",
       "name": "NHTSA FARS Crash Data",
       "provider": "NHTSA",
       "geography": "United States",
@@ -74,7 +74,7 @@
       "source_url": "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars"
     },
     {
-      "category": "safety",
+      "category": "road-safety",
       "name": "Crash Report Sampling System",
       "provider": "NHTSA",
       "geography": "United States",
@@ -85,10 +85,10 @@
       "source_url": "https://www.nhtsa.gov/crash-data-systems/crash-report-sampling-system"
     },
     {
-      "category": "safety",
+      "category": "road-safety",
       "name": "Motor Vehicle Collisions - Crashes",
       "provider": "NYC Open Data",
-      "geography": "New York City",
+      "geography": "United States / New York City",
       "access": "API + CSV",
       "license_or_terms": "NYC Open Data terms",
       "update_cadence": "Ongoing",
@@ -97,13 +97,13 @@
     },
     {
       "category": "efficiency",
-      "name": "EPA Fuel Economy Test Data",
+      "name": "EPA Fuel Economy Guide Historical Data (1978–2001)",
       "provider": "U.S. EPA",
       "geography": "United States",
-      "access": "CSV download",
+      "access": "CSV/ZIP download",
       "license_or_terms": "U.S. federal public data",
-      "update_cadence": "Annual",
-      "project_idea": "Vehicle efficiency and technology benchmarking",
+      "update_cadence": "Static",
+      "project_idea": "Historical vehicle efficiency and technology benchmarking",
       "source_url": "https://www.epa.gov/compliance-and-fuel-economy-data/test-data-annual-fuel-economy-guide"
     },
     {
@@ -122,9 +122,9 @@
       "name": "FuelEconomy.gov Web Services",
       "provider": "U.S. EPA + DOE",
       "geography": "United States",
-      "access": "REST API",
+      "access": "REST API + CSV/XML",
       "license_or_terms": "U.S. federal public data",
-      "update_cadence": "Annual",
+      "update_cadence": "Ongoing; fuel prices weekly/quarterly",
       "project_idea": "Model-level MPG comparison and TCO estimation",
       "source_url": "https://www.fueleconomy.gov/feg/ws/"
     },
@@ -159,7 +159,7 @@
       "license_or_terms": "U.S. federal public data",
       "update_cadence": "Periodic",
       "project_idea": "Highway charging-corridor coverage analysis",
-      "source_url": "https://hepgis.fhwa.dot.gov/fhwagis/ViewMap.aspx?map=Alternative%20Fuel%20Corridors"
+      "source_url": "https://www.fhwa.dot.gov/environment/alternative_fuel_corridors/"
     },
     {
       "category": "infrastructure",
@@ -168,7 +168,7 @@
       "geography": "Europe",
       "access": "Dashboard + downloads",
       "license_or_terms": "European Commission reuse terms",
-      "update_cadence": "Quarterly",
+      "update_cadence": "Ongoing",
       "project_idea": "EV adoption and charging-readiness comparison",
       "source_url": "https://alternative-fuels-observatory.ec.europa.eu/"
     },
@@ -176,9 +176,9 @@
       "category": "ev-market",
       "name": "Electric Vehicle Population Data",
       "provider": "Washington State DOL",
-      "geography": "Washington State",
+      "geography": "United States / Washington State",
       "access": "API + CSV",
-      "license_or_terms": "Open database terms",
+      "license_or_terms": "ODbL 1.0",
       "update_cadence": "Monthly",
       "project_idea": "EV make/model and regional adoption analysis",
       "source_url": "https://catalog.data.gov/dataset/electric-vehicle-population-data"
@@ -188,8 +188,8 @@
       "name": "Global EV Data Explorer",
       "provider": "International Energy Agency",
       "geography": "Global",
-      "access": "Explorer + download",
-      "license_or_terms": "IEA data terms",
+      "access": "Explorer + account-gated XLSX download",
+      "license_or_terms": "Explorer CC BY 4.0; download uses IEA non-CC terms",
       "update_cadence": "Annual",
       "project_idea": "Country-level EV sales and stock comparison",
       "source_url": "https://www.iea.org/data-and-statistics/data-tools/global-ev-data-explorer"
@@ -245,7 +245,7 @@
       "geography": "Great Britain",
       "access": "CSV download",
       "license_or_terms": "Open Government Licence",
-      "update_cadence": "Annual + quarterly",
+      "update_cadence": "Annual",
       "project_idea": "Traffic flow and road-segment exposure analysis",
       "source_url": "https://roadtraffic.dft.gov.uk/downloads"
     },
@@ -267,16 +267,16 @@
       "geography": "Great Britain",
       "access": "ZIP/CSV download",
       "license_or_terms": "Open Government Licence",
-      "update_cadence": "Annual",
-      "project_idea": "Failure-rate and maintenance-risk analysis",
+      "update_cadence": "Static (through 2023)",
+      "project_idea": "Historical failure-rate and maintenance-risk analysis",
       "source_url": "https://www.data.gov.uk/dataset/e3939ef8-30c7-4ca8-9c7c-ad9475cc9b2f/anonymised_mot_test"
     },
     {
       "category": "maintenance",
       "name": "MOT History Bulk Data",
       "provider": "UK DVSA",
-      "geography": "Great Britain",
-      "access": "Compressed download",
+      "geography": "United Kingdom",
+      "access": "Authenticated API + compressed bulk/delta (registration and API key required)",
       "license_or_terms": "Open Government Licence",
       "update_cadence": "Weekly + daily delta",
       "project_idea": "Vehicle test-history and reliability analysis",
@@ -286,7 +286,7 @@
       "category": "mobility",
       "name": "NYC TLC Trip Record Data",
       "provider": "NYC Taxi and Limousine Commission",
-      "geography": "New York City",
+      "geography": "United States / New York City",
       "access": "Parquet downloads",
       "license_or_terms": "NYC Open Data / source terms",
       "update_cadence": "Monthly",
@@ -297,7 +297,7 @@
       "category": "mobility",
       "name": "NYC TLC Aggregated Reports",
       "provider": "NYC Taxi and Limousine Commission",
-      "geography": "New York City",
+      "geography": "United States / New York City",
       "access": "CSV reports",
       "license_or_terms": "NYC Open Data / source terms",
       "update_cadence": "Monthly",
@@ -306,23 +306,23 @@
     },
     {
       "category": "mobility",
-      "name": "Chicago Transportation Network Provider Trips",
+      "name": "Chicago Transportation Network Provider Trips (2025-)",
       "provider": "Chicago Data Portal",
-      "geography": "Chicago",
+      "geography": "United States / Chicago",
       "access": "API + CSV",
       "license_or_terms": "Chicago open data terms",
-      "update_cadence": "Quarterly",
+      "update_cadence": "Ongoing",
       "project_idea": "Ride-hailing demand and travel-time analysis",
-      "source_url": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips-2024-/n26f-ihde"
+      "source_url": "https://data.cityofchicago.org/d/6dvr-xwnh"
     },
     {
       "category": "mobility",
       "name": "SFO Ground Transportation Trip Counts",
       "provider": "San Francisco International Airport",
-      "geography": "San Francisco",
+      "geography": "United States / San Francisco",
       "access": "API + CSV",
       "license_or_terms": "Public Domain Dedication and License",
-      "update_cadence": "Monthly",
+      "update_cadence": "Ongoing",
       "project_idea": "Airport ground-mode demand and revenue analysis",
       "source_url": "https://catalog.data.gov/dataset/sfo-ground-trip-counts-by-month-and-permit-type"
     },
@@ -341,12 +341,12 @@
       "category": "rental",
       "name": "LAX Rental Car Monthly Statistics",
       "provider": "Los Angeles World Airports",
-      "geography": "Los Angeles",
+      "geography": "United States / Los Angeles",
       "access": "PDF reports",
       "license_or_terms": "LAWA website terms",
       "update_cadence": "Monthly/annual",
       "project_idea": "Airport rental demand and market-share analysis",
-      "source_url": "https://www.lawa.org/lawa-investor-relations/statistics-for-lax/rental-car-statistics"
+      "source_url": "https://www.lawa.org/lawa-investor-relations/statistics-for-lax/lax-rental-car-statistics"
     },
     {
       "category": "rental",
@@ -357,7 +357,7 @@
       "license_or_terms": "U.S. federal public data",
       "update_cadence": "Monthly",
       "project_idea": "Rental-price inflation and seasonality analysis",
-      "source_url": "https://data.bls.gov/timeseries/CUSR0000SETA02"
+      "source_url": "https://data.bls.gov/timeseries/CUSR0000SETA04"
     },
     {
       "category": "used-cars",
@@ -383,14 +383,14 @@
     },
     {
       "category": "parking",
-      "name": "NYC Parking Violations",
+      "name": "NYC Parking Violations (Current Fiscal Year)",
       "provider": "NYC Open Data",
-      "geography": "New York City",
+      "geography": "United States / New York City",
       "access": "API + CSV",
       "license_or_terms": "NYC Open Data terms",
-      "update_cadence": "Annual",
+      "update_cadence": "Monthly",
       "project_idea": "Violation geography and vehicle-pattern analysis",
-      "source_url": "https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2026/pvqr-7yc4"
+      "source_url": "https://data.cityofnewyork.us/d/pvqr-7yc4"
     },
     {
       "category": "environment",
@@ -399,7 +399,7 @@
       "geography": "United States",
       "access": "API + bulk download",
       "license_or_terms": "U.S. federal public data",
-      "update_cadence": "Daily",
+      "update_cadence": "API ongoing + bulk semiannual",
       "project_idea": "Traffic exposure and air-quality association analysis",
       "source_url": "https://aqs.epa.gov/aqsweb/airdata/download_files.html"
     },
@@ -412,7 +412,7 @@
       "license_or_terms": "U.S. federal public data",
       "update_cadence": "Periodic",
       "project_idea": "Freight corridor and commodity-flow analysis",
-      "source_url": "https://faf.ornl.gov/faf5/"
+      "source_url": "https://www.bts.gov/faf/faf5"
     },
     {
       "category": "freight",

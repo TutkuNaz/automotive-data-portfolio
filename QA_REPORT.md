@@ -13,6 +13,8 @@ This report summarizes the checks completed before publication of the automotive
 - README findings were checked against generated metrics and analytical outputs.
 - No API tokens, passwords or private credentials are stored in the repositories.
 - GitHub Actions CI is configured for all three technical projects.
+- The open-data hub validates 38 catalog entries, its generated JSON export,
+  search behavior, starter analysis and source-link health in GitHub Actions.
 
 ## 01 — Used Car Market Intelligence
 
@@ -68,4 +70,4 @@ The LAWA revenue table contains a $1 difference between the printed annual total
 | 01-used-car-market-intelligence | Yes | Yes | Yes | Passed | Yes |
 | 02-fleet-efficiency-benchmark | Yes | Yes | Yes | Passed | Yes |
 | 03-lax-rental-market-intelligence | Yes | Yes | Yes | Passed | Yes |
-| automotive-data-portfolio | Yes | Yes | Portfolio index | N/A | Project links |
+| automotive-data-portfolio | Yes | Yes | Python + data catalog | Passed | Starter notebook + project links |

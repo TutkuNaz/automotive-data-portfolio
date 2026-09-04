@@ -2,14 +2,14 @@
 
 Research date: **2026-09-04**.
 
-The portfolio was intentionally limited to three completed projects. Additional datasets were reviewed but not converted into empty or half-finished repositories.
+The portfolio contains three completed standalone projects. Additional sources are maintained in the open-data catalog and are promoted to starter analyses or standalone repositories only when the scope supports a complete, reproducible project.
 
 | Source | Potential use | License / reuse position | Decision |
 |---|---|---|---|
 | Kaggle — 100,000 UK Used Car Data Set | Used-car pricing and resale analysis | Dataset page marks it **CC0 / Public Domain** | Selected for Project 01; raw data kept out of Git for repository hygiene |
 | U.S. EPA / fueleconomy.gov via `plotnine.data.mpg` | Fuel-efficiency benchmark | EPA standard open-data policy states agency-produced data are public domain unless otherwise specified; plotnine is MIT | Selected for Project 02 |
 | Los Angeles World Airports CY2024 Rental Car Monthly Stats | Direct rental-market seasonality and share analysis | LAWA general disclaimer states website information is public domain unless otherwise indicated; Investor Relations publishes additional terms | Selected for Project 03 with conservative runtime retrieval; original PDF not redistributed |
-| NHTSA Consumer Complaints | Reliability / maintenance-risk NLP | U.S. federal public data; large daily-updated bulk file | Strong candidate for a future Project 04; not opened until it can be built fully |
+| NHTSA Consumer Complaints | Reliability / maintenance-risk analysis | U.S. federal public data; large daily-updated bulk file | Cataloged with a reproducible API starter; a full-scale Project 04 remains deferred until it can be built fully |
 | NHTSA Recalls | Reliability / recall-risk analysis | U.S. federal public data | Strong candidate to combine with complaints rather than create a separate small repo |
 | Washington State Electric Vehicle Population | EV adoption and geospatial analysis | ODbL 1.0; current public data | Strong future EV project candidate |
 | U.S. DOE AFDC Alternative Fuel Stations | Charging-infrastructure gap analysis | Public federal data with source-specific reuse terms | Candidate to combine with EV population data |
