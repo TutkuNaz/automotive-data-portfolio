@@ -4,11 +4,10 @@ The repository is evolving from a portfolio index into a practical automotive op
 
 ## Near term
 
-- Expand the catalog to 30+ high-quality first-party datasets.
-- Add automated source-link health checks.
+- Expand the catalog from 38 to 50+ high-quality sources without lowering the inclusion standard.
+- Triage results from the weekly automated source-link check.
 - Add category pages for safety, EV/charging, rental/mobility, maintenance and vehicle economics.
-- Add downloadable JSON alongside CSV for programmatic use.
-- Add one reproducible starter notebook per major category.
+- Add one reproducible starter notebook per major category; NHTSA complaints is the first.
 
 ## Next
 

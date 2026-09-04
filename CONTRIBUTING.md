@@ -30,9 +30,18 @@ Then run:
 
 ```bash
 python -m unittest discover -s tests -v
-python scripts/search_catalog.py automotive
+python scripts/export_catalog.py
+python scripts/search_catalog.py automotive --format table
 ```
+
+Commit both `datasets/catalog.csv` and the regenerated `datasets/catalog.json`. CI rejects a stale JSON export.
+
+## Reviewing a source
+
+Before proposing an entry, confirm that the page is reachable, the provider is identifiable, the access method is accurate and the license/terms field is cautious. A landing page is preferable to a brittle direct-download URL. Public access does not automatically permit redistribution.
+
+Maintainers can check the full catalog with `python scripts/check_links.py`.
 
 ## Pull requests
 
-Keep each pull request focused. For dataset additions, include the source URL and a short note explaining why the source is useful.
+Keep each pull request focused. For dataset additions, include the source URL, the date you verified it and a short note explaining why the source is useful. One to five closely related entries per pull request is a good reviewable size.

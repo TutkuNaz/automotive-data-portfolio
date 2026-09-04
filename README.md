@@ -3,7 +3,9 @@
 [![Catalog CI](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml/badge.svg)](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml)
 ![GitHub stars](https://img.shields.io/github/stars/atasardacagan/automotive-data-portfolio?style=social)
 
-A practical index of public automotive and mobility datasets, plus reproducible analytics projects covering used-car markets, fleet efficiency and rental demand.
+**38 curated datasets · 14 categories · CSV + JSON · zero-dependency search · reproducible starters**
+
+A practical index of public automotive and mobility data, plus reproducible analytics projects covering vehicle safety, EV infrastructure, used-car markets, fleet efficiency and rental demand.
 
 The goal is simple: make it faster to find trustworthy vehicle data, understand how it can be used, and turn it into a real analysis project.
 
@@ -20,7 +22,7 @@ The catalog currently covers public sources for:
 - airport rental-car statistics;
 - used-car pricing and resale analysis.
 
-Browse the source file: [`datasets/catalog.csv`](datasets/catalog.csv)
+Use the catalog as [`CSV`](datasets/catalog.csv), [`JSON`](datasets/catalog.json), or from the command line. Sources favor first-party public agencies and are selected for practical usefulness.
 
 Each entry records the provider, geography, access method, license/source terms, update cadence and a concrete project idea.
 
@@ -31,11 +33,22 @@ No third-party packages are required.
 ```bash
 python scripts/search_catalog.py safety
 python scripts/search_catalog.py "ev charging"
-python scripts/search_catalog.py "fuel economy"
-python scripts/search_catalog.py --category mobility
+python scripts/search_catalog.py --category mobility --format table
+python scripts/search_catalog.py vehicle --geography "United States" --format json
+python scripts/search_catalog.py --list-categories
 ```
 
 Example sources include NHTSA complaints and recalls, EPA fuel-economy data, DOE alternative-fuel infrastructure, UK STATS19 road-safety data, anonymised MOT records, NYC TLC trip records and LAWA rental-car statistics.
+
+### Start an analysis in minutes
+
+The [NHTSA vehicle-complaint starter](examples/README.md) retrieves public complaint records for a selected make, model and year, then summarizes crash/fire flags and the most frequently reported components. It is available as both a [notebook](examples/nhtsa_reliability_starter.ipynb) and a zero-dependency [Python script](examples/nhtsa_reliability_starter.py).
+
+```bash
+python examples/nhtsa_reliability_starter.py --make HONDA --model CIVIC --year 2020
+```
+
+Complaint volume is a signal, not a failure rate; the example documents the exposure and reporting-bias limitations that matter when interpreting it.
 
 ## Featured Analytics Projects
 
@@ -77,7 +90,7 @@ This repository keeps a compact, reviewable catalog and pairs it with working ex
 
 New dataset suggestions, source corrections and tooling improvements are welcome.
 
-Start with [`CONTRIBUTING.md`](CONTRIBUTING.md), or open a **Dataset suggestion** issue. The catalog is automatically checked for required fields, unique dataset names and valid HTTPS source URLs.
+Start with [`CONTRIBUTING.md`](CONTRIBUTING.md), or open a **Dataset suggestion** issue. Every pull request validates the schema, generated JSON, catalog breadth, unique names and search behavior. A scheduled workflow also checks source-link health each week.
 
 ```bash
 python -m unittest discover -s tests -v
@@ -102,6 +115,8 @@ Python · pandas · NumPy · SQL · SQLite · scikit-learn · SciPy · Matplotli
 ## Supporting Material
 
 - [`datasets/catalog.csv`](datasets/catalog.csv) — searchable automotive open-data catalog
+- [`datasets/catalog.json`](datasets/catalog.json) — programmatic catalog export
+- [`examples/`](examples/) — reproducible starter analyses
 - [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) — source and licensing research
 - [`CV_PROJECT_DESCRIPTIONS.md`](CV_PROJECT_DESCRIPTIONS.md) — concise CV project descriptions
 - [`QA_REPORT.md`](QA_REPORT.md) — validation and publication checks
