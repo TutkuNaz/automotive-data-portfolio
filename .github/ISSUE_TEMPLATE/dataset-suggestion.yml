@@ -1,0 +1,37 @@
+name: Dataset suggestion
+description: Suggest a public automotive or mobility dataset for the catalog
+title: "Dataset: "
+labels: []
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Dataset name
+    validations:
+      required: true
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Source URL
+      description: Prefer a first-party or authoritative source.
+    validations:
+      required: true
+  - type: input
+    id: terms
+    attributes:
+      label: License or source terms
+    validations:
+      required: true
+  - type: textarea
+    id: usecase
+    attributes:
+      label: Why is it useful?
+      description: Describe one or two concrete automotive, mobility, fleet or safety use cases.
+    validations:
+      required: true
