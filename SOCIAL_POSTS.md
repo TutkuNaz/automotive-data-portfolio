@@ -1,37 +1,41 @@
-# Social Posts
+# Professional Project Summaries
 
-## 1 — Used Car Market Intelligence
+## Used Car Market Intelligence
 
-**What changes a used car's market position more: age, mileage, or the vehicle itself?**
+I built a used-car market analysis project using a public UK dataset to study the relationship between price, mileage, vehicle age and model characteristics.
 
-I built a used-car market intelligence project around a public CC0 UK dataset, with a reproducible Python pipeline, SQL cohort analysis and price-model benchmarks.
+The workflow combines Python-based data processing, SQL cohort analysis, regression benchmarks and an interactive Streamlit dashboard. One of the main takeaways was the importance of evaluating age and mileage together: raw brand-level averages can be misleading when the underlying vehicle mix differs substantially.
 
-The part I found most useful was not the model score itself. Age and mileage move together strongly in listing data, so simple brand averages can be misleading unless comparable vehicle cohorts are considered.
+The project also includes data-quality checks, executed notebooks, model evaluation and reproducible data-ingestion scripts.
 
-The repository includes data-quality rules, executed notebooks, SQL analysis, model evaluation and an interactive dashboard. Where the build environment only allowed a development validation snapshot, I label those metrics explicitly rather than presenting them as full-dataset results.
+**Stack:** Python, pandas, SQL, scikit-learn, Plotly, Streamlit, pytest.
 
-Tech: Python, pandas, SQL, scikit-learn, Plotly, Streamlit, pytest.
+Repository: https://github.com/atasardacagan/01-used-car-market-intelligence
 
-## 2 — LAX Rental Market Intelligence
+---
 
-**What does one year of public airport rental-car data reveal about demand?**
+## LAX Rental Market Intelligence
 
-I analyzed Los Angeles World Airports' public CY2024 on-airport rental-car statistics and built a Python/SQL pipeline around monthly transactions, market share and gross revenue after exclusions.
+I analyzed public Los Angeles World Airports rental-car statistics to understand monthly demand, market concentration and company share movements at LAX.
 
-The 2024 data contain 2.27M on-airport rental transactions. August was the highest-volume month, December the lowest, and the top three companies represented just under half of annual transactions.
+The 2024 dataset contains approximately 2.27 million on-airport rental transactions. August recorded the highest monthly volume, while December recorded the lowest. The three largest companies represented just under half of annual transactions.
 
-I also kept a $1 reconciliation difference between LAWA's printed revenue total and the sum of company rows instead of silently “fixing” the source. That kind of source QA is often more important than another chart.
+The project includes a Python/SQL data pipeline, source reconciliation, automated tests and a Streamlit dashboard. During validation, I also retained a $1 difference between LAWA's printed annual revenue total and the sum of company rows rather than modifying the source values.
 
-Tech: Python, SQL, pandas, Plotly, Streamlit, pdfplumber, pytest.
+**Stack:** Python, pandas, SQL, Plotly, Streamlit, pdfplumber, pytest.
 
-## 3 — Fleet Efficiency Benchmark
+Repository: https://github.com/atasardacagan/03-lax-rental-market-intelligence
 
-**A newer model year does not automatically mean a better result in every sample.**
+---
 
-I used an EPA-derived historical fuel-economy dataset to compare popular 1999 and 2008 vehicle configurations by class, displacement and drivetrain.
+## Fleet Efficiency Benchmark
 
-In this selected sample, median city/highway MPG was 17/25 in both model-year groups, and a Mann–Whitney test did not show a statistically clear shift in the weighted efficiency proxy. Vehicle class and displacement were more informative for the business question.
+I used an EPA-derived historical fuel-economy dataset to compare vehicle classes, engine displacement and model-year groups from a fleet-efficiency perspective.
 
-I intentionally left machine learning out of this project. The data and question were better suited to SQL, statistical comparison and transparent fleet-efficiency metrics.
+In the selected sample, median city and highway MPG were the same for the 1999 and 2008 groups, and a Mann–Whitney U test did not show a statistically clear shift in the weighted efficiency proxy. Vehicle class and engine displacement provided more useful segmentation for the analysis.
 
-Tech: Python, SQL, SciPy, SQLite, Matplotlib, pytest.
+The project focuses on SQL, statistical comparison and transparent efficiency metrics rather than adding a machine-learning model where it would not improve the business question.
+
+**Stack:** Python, pandas, SQL, SciPy, SQLite, Matplotlib, pytest.
+
+Repository: https://github.com/atasardacagan/02-fleet-efficiency-benchmark
