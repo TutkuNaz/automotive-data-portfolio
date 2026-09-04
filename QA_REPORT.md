@@ -2,7 +2,7 @@
 
 Validation date: **2026-09-04**.
 
-This document records the portfolio build checks performed before publication. It is intended to make the limits of the published outputs explicit rather than imply that every external data source could be downloaded from the restricted build runtime.
+This document records the portfolio build checks performed before and after publication. It is intended to make the limits of the published outputs explicit rather than imply that every external data source could be downloaded from the restricted build runtime.
 
 ## Portfolio-Level Checks
 
@@ -13,10 +13,12 @@ This document records the portfolio build checks performed before publication. I
 - README claims were checked against generated metrics and reports.
 - No TODO/TBD placeholder sections are intentionally published.
 - No API tokens, passwords or private credentials are required by the repositories.
+- Final GitHub Actions runs on the published `main` branches were checked after upload: **01 success, 02 success, 03 success**.
 
 ## 01 — Used Car Market Intelligence
 
-**Local validation:** passed.
+**Local validation:** passed.  
+**Published GitHub Actions CI:** **success**.
 
 - `pytest -q`: **1 passed**.
 - Python source compiled successfully.
@@ -28,7 +30,8 @@ This document records the portfolio build checks performed before publication. I
 
 ## 02 — Fleet Efficiency Benchmark
 
-**Local validation:** passed.
+**Local validation:** passed.  
+**Published GitHub Actions CI:** **success**.
 
 - `pytest -q`: **1 passed**.
 - Python source compiled successfully.
@@ -39,12 +42,14 @@ This document records the portfolio build checks performed before publication. I
 
 ## 03 — LAX Rental Market Intelligence
 
-**Local validation:** passed.
+**Local validation:** passed.  
+**Published GitHub Actions CI:** **success**.
 
 - Fresh-clone-style self-contained tests: **2 passed**.
 - Python source compiled successfully.
 - Test fixtures were redesigned so CI does not require committed raw LAWA tables.
-- Monthly transaction, annual share, market-share heatmap and revenue-per-transaction figures were generated and published as SVG assets.
+- Monthly transaction, annual share, market-share heatmap and revenue-per-transaction figures are published as SVG assets at the exact paths referenced by the README.
+- The final repository tree includes the extraction script, analytics pipeline, SQL, tests, CI workflow, executed notebooks, report outputs and Streamlit dashboard.
 - The source transaction total reconciles to **2,273,819**.
 - The source printed revenue total is **$816,143,884** while company rows sum to **$816,143,885**; the **$1 source discrepancy** is preserved rather than silently corrected.
 - The PDF runtime extraction script is included, but direct external network execution was unavailable in the build container; the repository documents this limitation.
@@ -62,9 +67,13 @@ This document records the portfolio build checks performed before publication. I
 
 | Repository | Public | README | Code / SQL | Tests / CI | Visuals |
 |---|---|---|---|---|---|
-| 01-used-car-market-intelligence | Yes | Yes | Yes | Yes | Yes |
-| 02-fleet-efficiency-benchmark | Yes | Yes | Yes | Yes | Yes |
-| 03-lax-rental-market-intelligence | Yes | Yes | Yes | Yes | Yes |
+| 01-used-car-market-intelligence | Yes | Yes | Yes | GitHub Actions: success | Yes |
+| 02-fleet-efficiency-benchmark | Yes | Yes | Yes | GitHub Actions: success | Yes |
+| 03-lax-rental-market-intelligence | Yes | Yes | Yes | GitHub Actions: success | Yes |
 | automotive-data-portfolio | Yes | Yes | Portfolio index | N/A | Links to project visuals |
+
+## GitHub Profile Note
+
+The authenticated account is `atasardacagan`. A special GitHub profile README repository named `atasardacagan/atasardacagan` does **not** currently exist, so no existing profile README was modified or overwritten. The public portfolio repositories themselves are published and accessible from the account.
 
 The portfolio should be read as an independent public-data body of work inspired by automotive and mobility interests, not as a representation of any employer's internal systems or datasets.
