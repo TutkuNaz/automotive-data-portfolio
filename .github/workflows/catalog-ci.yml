@@ -6,15 +6,20 @@ on:
     - cron: "17 7 * * 1"
   push:
     paths:
+      - "README.md"
       - "datasets/**"
+      - "examples/**"
       - "scripts/**"
       - "tests/**"
       - ".github/workflows/catalog-ci.yml"
   pull_request:
     paths:
+      - "README.md"
       - "datasets/**"
+      - "examples/**"
       - "scripts/**"
       - "tests/**"
+      - ".github/workflows/catalog-ci.yml"
 
 permissions:
   contents: read
@@ -30,9 +35,11 @@ jobs:
       - name: Run catalog tests
         run: python -m unittest discover -s tests -v
       - name: Verify generated JSON is current
+        run: python scripts/export_catalog.py --check
+      - name: Validate starter examples
         run: |
-          python scripts/export_catalog.py
-          git diff --exit-code datasets/catalog.json
+          python -m py_compile examples/*.py
+          python -m json.tool examples/nhtsa_reliability_starter.ipynb > /dev/null
       - name: Smoke-test catalog search
         run: python scripts/search_catalog.py safety --format table
 
@@ -45,4 +52,4 @@ jobs:
         with:
           python-version: "3.12"
       - name: Check source links
-        run: python scripts/check_links.py --attempts 3
+        run: python scripts/check_links.py --attempts 3 --workers 8
