@@ -1,0 +1,37 @@
+name: Broken or outdated source
+description: Report a broken URL or a source that changed format, access or terms
+title: "Source update: "
+labels: []
+body:
+  - type: input
+    id: dataset
+    attributes:
+      label: Dataset
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Current catalog URL
+    validations:
+      required: true
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What changed?
+      options:
+        - Broken URL
+        - Access method changed
+        - License or terms changed
+        - Dataset retired
+        - Schema or format changed
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Include a replacement first-party source when available.
+    validations:
+      required: true
