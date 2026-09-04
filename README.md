@@ -1,10 +1,43 @@
-# Automotive Data Portfolio
+# Automotive Open Data & Analytics
 
-Data projects focused on automotive markets, fleet economics and mobility analytics.
+[![Catalog CI](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml/badge.svg)](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml)
+![GitHub stars](https://img.shields.io/github/stars/atasardacagan/automotive-data-portfolio?style=social)
 
-My interest in automotive analytics developed through experience in the car-rental industry. The work in this portfolio is independent and uses public data only; no proprietary company, customer or operational data are included.
+A practical index of public automotive and mobility datasets, plus reproducible analytics projects covering used-car markets, fleet efficiency and rental demand.
 
-## Projects
+The goal is simple: make it faster to find trustworthy vehicle data, understand how it can be used, and turn it into a real analysis project.
+
+## Automotive Dataset Catalog
+
+The catalog currently covers public sources for:
+
+- vehicle safety, complaints, recalls and crash data;
+- fuel economy and fleet-efficiency analysis;
+- EV and alternative-fuel infrastructure;
+- VIN and vehicle-specification enrichment;
+- road safety and MOT/inspection history;
+- taxi, FHV and urban mobility demand;
+- airport rental-car statistics;
+- used-car pricing and resale analysis.
+
+Browse the source file: [`datasets/catalog.csv`](datasets/catalog.csv)
+
+Each entry records the provider, geography, access method, license/source terms, update cadence and a concrete project idea.
+
+### Search the catalog
+
+No third-party packages are required.
+
+```bash
+python scripts/search_catalog.py safety
+python scripts/search_catalog.py "ev charging"
+python scripts/search_catalog.py "fuel economy"
+python scripts/search_catalog.py --category mobility
+```
+
+Example sources include NHTSA complaints and recalls, EPA fuel-economy data, DOE alternative-fuel infrastructure, UK STATS19 road-safety data, anonymised MOT records, NYC TLC trip records and LAWA rental-car statistics.
+
+## Featured Analytics Projects
 
 | Project | Focus | Stack |
 |---|---|---|
@@ -12,83 +45,69 @@ My interest in automotive analytics developed through experience in the car-rent
 | [**Fleet Efficiency Benchmark**](https://github.com/atasardacagan/02-fleet-efficiency-benchmark) | Fuel economy, vehicle-class trade-offs and fleet-efficiency benchmarking | Python, SQL, SciPy, SQLite |
 | [**LAX Rental Market Intelligence**](https://github.com/atasardacagan/03-lax-rental-market-intelligence) | Airport rental demand, seasonality, market share and concentration | Python, SQL, pdfplumber, Streamlit |
 
-## Portfolio Structure
-
-The projects follow a practical vehicle-lifecycle perspective:
+These projects follow a practical vehicle-lifecycle perspective:
 
 **acquisition and resale → operating efficiency → rental demand and market context**
 
-### Used Car Market Intelligence
+### 01 — Used Car Market Intelligence
 
-A pricing and resale analysis built on a public UK used-car dataset. The project combines data cleaning, SQL segmentation, regression benchmarks, feature analysis and an interactive dashboard.
+Pricing and resale analysis built on a public UK used-car dataset, combining data cleaning, SQL segmentation, regression benchmarks, feature analysis and an interactive dashboard.
 
-[View repository →](https://github.com/atasardacagan/01-used-car-market-intelligence)
+[View project →](https://github.com/atasardacagan/01-used-car-market-intelligence)
 
-### Fleet Efficiency Benchmark
+### 02 — Fleet Efficiency Benchmark
 
-A historical fuel-economy study based on an EPA-derived dataset. The analysis compares vehicle classes, engine displacement and model-year distributions using SQL and statistical testing.
+Historical fuel-economy analysis based on an EPA-derived dataset, with vehicle-class and displacement benchmarking plus statistical comparison of model-year groups.
 
-[View repository →](https://github.com/atasardacagan/02-fleet-efficiency-benchmark)
+[View project →](https://github.com/atasardacagan/02-fleet-efficiency-benchmark)
 
-### LAX Rental Market Intelligence
+### 03 — LAX Rental Market Intelligence
 
-A market-level analysis of public Los Angeles World Airports rental-car statistics. The project covers monthly demand, market concentration, company share volatility and revenue-per-transaction benchmarking.
+Market-level analysis of public Los Angeles World Airports rental-car statistics covering monthly demand, market concentration, company-share volatility and revenue-per-transaction benchmarking.
 
-[View repository →](https://github.com/atasardacagan/03-lax-rental-market-intelligence)
+[View project →](https://github.com/atasardacagan/03-lax-rental-market-intelligence)
 
-## Core Skills
+## Why This Repository Exists
 
-- Python data processing with pandas and NumPy
-- SQL analytics with CTEs, window functions and segmentation
-- Data validation, reconciliation and quality checks
-- Exploratory analysis and statistical testing
-- Regression modeling and model evaluation
-- Business KPI design and interpretation
-- Matplotlib and Plotly visualization
-- Streamlit dashboard development
-- pytest-based testing
-- Reproducible data-ingestion workflows
-- GitHub Actions CI
-- Dataset licensing and provenance documentation
+Automotive datasets are spread across government portals, APIs, reports and third-party platforms. Access methods and usage terms vary, and finding a useful source often takes longer than the first analysis.
 
-## Working Principles
+This repository keeps a compact, reviewable catalog and pairs it with working examples. It prioritizes first-party sources, clear provenance and realistic project ideas over collecting links without context.
 
-The projects are built around a few consistent rules:
+## Contributing
 
-- use public data with documented provenance;
-- keep raw data outside the repository when redistribution is unnecessary or unclear;
-- distinguish descriptive analysis, prediction and causal interpretation;
-- document assumptions and known data limitations;
-- use machine learning only when it adds analytical value.
+New dataset suggestions, source corrections and tooling improvements are welcome.
 
-Dataset selection and licensing notes are documented in [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md).
+Start with [`CONTRIBUTING.md`](CONTRIBUTING.md), or open a **Dataset suggestion** issue. The catalog is automatically checked for required fields, unique dataset names and valid HTTPS source URLs.
 
-## Repository Standard
-
-Each project separates analysis code, notebooks, SQL, tests and generated outputs:
-
-```text
-project/
-├── README.md
-├── data/
-├── notebooks/
-├── scripts/
-├── src/
-├── sql/
-├── reports/
-├── tests/
-└── .github/workflows/ci.yml
+```bash
+python -m unittest discover -s tests -v
 ```
 
-Interactive dashboards are included where they improve exploration of the results.
+See [`ROADMAP.md`](ROADMAP.md) for planned categories and tooling.
+
+## Data Principles
+
+- Prefer first-party or authoritative public sources.
+- Record license or source terms without overstating redistribution rights.
+- Keep proprietary, confidential and personally sensitive data out of the repository.
+- Separate descriptive findings, predictive modeling and causal claims.
+- Document known source limitations and reconciliation issues.
+
+Dataset selection and licensing notes are available in [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md).
+
+## Technical Coverage
+
+Python · pandas · NumPy · SQL · SQLite · scikit-learn · SciPy · Matplotlib · Plotly · Streamlit · pytest · GitHub Actions · public-data APIs · data-quality validation
 
 ## Supporting Material
 
-- [`CV_PROJECT_DESCRIPTIONS.md`](CV_PROJECT_DESCRIPTIONS.md) — concise project bullets for CV use
-- [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) — dataset and licensing review
+- [`datasets/catalog.csv`](datasets/catalog.csv) — searchable automotive open-data catalog
+- [`DATASET_RESEARCH.md`](DATASET_RESEARCH.md) — source and licensing research
+- [`CV_PROJECT_DESCRIPTIONS.md`](CV_PROJECT_DESCRIPTIONS.md) — concise CV project descriptions
 - [`QA_REPORT.md`](QA_REPORT.md) — validation and publication checks
-- [`SOCIAL_POSTS.md`](SOCIAL_POSTS.md) — project summaries for professional posts
+- [`SOCIAL_POSTS.md`](SOCIAL_POSTS.md) — project launch drafts
+- [`ROADMAP.md`](ROADMAP.md) — planned catalog and analysis extensions
 
-## Next Areas of Interest
+---
 
-Potential extensions include vehicle reliability and maintenance-risk analysis using NHTSA data, and EV adoption / charging-infrastructure analysis using licensed public datasets.
+If this catalog saves you time or gives you a useful project idea, consider starring the repository so you can find future additions easily.
