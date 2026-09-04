@@ -1,25 +1,28 @@
 # CV Project Descriptions
 
-Use only the bullets that fit the role and available CV space.
+Concise project descriptions for data analyst and data science applications.
 
 ## Used Car Market Intelligence
 
-- Built a reproducible Python, SQL and scikit-learn workflow for used-car market analysis, combining data-quality rules, pricing/depreciation segmentation, baseline model comparison and an interactive dashboard.
+- Developed a reproducible Python and SQL pipeline for used-car market analysis, including data validation, cohort-based pricing analysis and resale-value benchmarking.
+- Benchmarked regression models with scikit-learn and built an interactive Streamlit dashboard for pricing and model-performance exploration.
 
 ## Fleet Efficiency Benchmark
 
-- Analyzed an EPA-derived vehicle fuel-economy dataset with Python, SQL and statistical testing to benchmark vehicle classes, displacement segments and fuel-intensity trade-offs for fleet-oriented decision support.
+- Analyzed an EPA-derived vehicle fuel-economy dataset with Python, SQL and statistical testing to compare vehicle classes, engine displacement and fuel-intensity trade-offs.
+- Built a reproducible SQLite analytics workflow for fleet-oriented efficiency benchmarking and decision support.
 
 ## LAX Rental Market Intelligence
 
-- Transformed public Los Angeles World Airports rental-car statistics into a tested Python/SQL analytics pipeline covering monthly demand seasonality, market concentration, share volatility and revenue-per-transaction benchmarking.
+- Built a Python and SQL analytics pipeline from public Los Angeles World Airports rental-car statistics covering monthly demand, seasonality, market concentration and share volatility.
+- Added source reconciliation, automated tests and an interactive Streamlit dashboard for market-level rental analysis.
 
-## Data Analyst CV — Recommended Two
+## Recommended Selection
 
+**Data Analyst roles**
 1. LAX Rental Market Intelligence
 2. Fleet Efficiency Benchmark
 
-## Data Scientist CV — Recommended Two
-
+**Data Science roles**
 1. Used Car Market Intelligence
 2. LAX Rental Market Intelligence
