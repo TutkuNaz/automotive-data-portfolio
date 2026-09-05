@@ -18,7 +18,7 @@ from typing import Literal
 CATALOG = Path(__file__).resolve().parents[1] / "datasets" / "catalog.csv"
 USER_AGENT = (
     "automotive-open-data-link-check/1.0 "
-    "(+https://github.com/atasardacagan/automotive-data-portfolio)"
+    "(+https://github.com/TutkuNaz/automotive-data-portfolio)"
 )
 RESTRICTED_STATUSES = {401, 403, 405}
 BROKEN_STATUSES = {404, 410}

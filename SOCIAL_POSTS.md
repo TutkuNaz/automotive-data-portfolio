@@ -10,7 +10,7 @@ The project also includes data-quality checks, executed notebooks, model evaluat
 
 **Stack:** Python, pandas, SQL, scikit-learn, Plotly, Streamlit, pytest.
 
-Repository: https://github.com/atasardacagan/01-used-car-market-intelligence
+Repository: https://github.com/TutkuNaz/01-used-car-market-intelligence
 
 ---
 
@@ -24,7 +24,7 @@ The project includes a Python/SQL data pipeline, source reconciliation, automate
 
 **Stack:** Python, pandas, SQL, Plotly, Streamlit, pdfplumber, pytest.
 
-Repository: https://github.com/atasardacagan/03-lax-rental-market-intelligence
+Repository: https://github.com/TutkuNaz/03-lax-rental-market-intelligence
 
 ---
 
@@ -38,4 +38,4 @@ The project focuses on SQL, statistical comparison and transparent efficiency me
 
 **Stack:** Python, pandas, SQL, SciPy, SQLite, Matplotlib, pytest.
 
-Repository: https://github.com/atasardacagan/02-fleet-efficiency-benchmark
+Repository: https://github.com/TutkuNaz/02-fleet-efficiency-benchmark

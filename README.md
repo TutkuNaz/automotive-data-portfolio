@@ -1,7 +1,7 @@
 # Automotive Open Data & Analytics
 
-[![Catalog CI](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml/badge.svg)](https://github.com/atasardacagan/automotive-data-portfolio/actions/workflows/catalog-ci.yml)
-![GitHub stars](https://img.shields.io/github/stars/atasardacagan/automotive-data-portfolio?style=social)
+[![Catalog CI](https://github.com/TutkuNaz/automotive-data-portfolio/actions/workflows/catalog-ci.yml/badge.svg)](https://github.com/TutkuNaz/automotive-data-portfolio/actions/workflows/catalog-ci.yml)
+![GitHub stars](https://img.shields.io/github/stars/TutkuNaz/automotive-data-portfolio?style=social)
 
 **38 curated datasets · 14 categories · CSV + JSON · zero-dependency search · reproducible starters**
 
@@ -54,9 +54,9 @@ Complaint volume is a signal, not a failure rate; the example documents the expo
 
 | Project | Focus | Stack |
 |---|---|---|
-| [**Used Car Market Intelligence**](https://github.com/atasardacagan/01-used-car-market-intelligence) | Used-car pricing, mileage, depreciation patterns and resale-value benchmarking | Python, SQL, scikit-learn, Streamlit |
-| [**Fleet Efficiency Benchmark**](https://github.com/atasardacagan/02-fleet-efficiency-benchmark) | Fuel economy, vehicle-class trade-offs and fleet-efficiency benchmarking | Python, SQL, SciPy, SQLite |
-| [**LAX Rental Market Intelligence**](https://github.com/atasardacagan/03-lax-rental-market-intelligence) | Airport rental demand, seasonality, market share and concentration | Python, SQL, pdfplumber, Streamlit |
+| [**Used Car Market Intelligence**](https://github.com/TutkuNaz/01-used-car-market-intelligence) | Used-car pricing, mileage, depreciation patterns and resale-value benchmarking | Python, SQL, scikit-learn, Streamlit |
+| [**Fleet Efficiency Benchmark**](https://github.com/TutkuNaz/02-fleet-efficiency-benchmark) | Fuel economy, vehicle-class trade-offs and fleet-efficiency benchmarking | Python, SQL, SciPy, SQLite |
+| [**LAX Rental Market Intelligence**](https://github.com/TutkuNaz/03-lax-rental-market-intelligence) | Airport rental demand, seasonality, market share and concentration | Python, SQL, pdfplumber, Streamlit |
 
 These projects follow a practical vehicle-lifecycle perspective:
 
@@ -66,19 +66,19 @@ These projects follow a practical vehicle-lifecycle perspective:
 
 Pricing and resale analysis built on a public UK used-car dataset, combining data cleaning, SQL segmentation, regression benchmarks, feature analysis and an interactive dashboard.
 
-[View project →](https://github.com/atasardacagan/01-used-car-market-intelligence)
+[View project →](https://github.com/TutkuNaz/01-used-car-market-intelligence)
 
 ### 02 — Fleet Efficiency Benchmark
 
 Historical fuel-economy analysis based on an EPA-derived dataset, with vehicle-class and displacement benchmarking plus statistical comparison of model-year groups.
 
-[View project →](https://github.com/atasardacagan/02-fleet-efficiency-benchmark)
+[View project →](https://github.com/TutkuNaz/02-fleet-efficiency-benchmark)
 
 ### 03 — LAX Rental Market Intelligence
 
 Market-level analysis of public Los Angeles World Airports rental-car statistics covering monthly demand, market concentration, company-share volatility and revenue-per-transaction benchmarking.
 
-[View project →](https://github.com/atasardacagan/03-lax-rental-market-intelligence)
+[View project →](https://github.com/TutkuNaz/03-lax-rental-market-intelligence)
 
 ## Why This Repository Exists
 
